@@ -14,15 +14,14 @@ Developers:
 
 Brian de Reus:
 
-&#x09;\* \[Test 1]
+* test 1
+* test 2
 
 Dylano Bakmeijer:
 
-&#x09;\* \[Test 1]
+* test 3
 
 Ytshiero Bruce:
-
-&#x09;\* \[Test 1]
 
 
 
@@ -30,17 +29,27 @@ Artists:
 
 Femke Aten:
 
-&#x09;\* \[Test 1]
-
 Nero Krop:
-
-&#x09;\* \[Test 1]
 
 Phoenix Aardenburg:
 
-&#x09;\* \[Test 1]
-
 Ruby Wijnands:
 
-&#x09;\* \[Test 1]
+
+
+## test 1 by Brian de Reus
+
+De dinosaurus met de langste naam is de micropachycephalosaurus, de grootste vliegende dier ooit is de quetzalcoatlus.
+
+## Flowchart voor test 1
+
+(voeg hier foto toe van flowchart)
+
+## Class Diagram van (wat de mechanic ook is)
+
+(voeg hier class diagram toe)
+
+## test 3 bij Dylano Bakmeijer
+
+
 
