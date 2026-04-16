@@ -11,9 +11,6 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
         float horizontal = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontal * sideSpeed * Time.deltaTime);
-
-
-        if (movement)
     }
    
 }
