@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-  [SerializedField] public float forwardSpeed = 10f;
-  [SerializedField] public float sideSpeed = 5f;
+  [SerializeField] public float forwardSpeed = 10f;
+  [SerializeField] public float sideSpeed = 5f;
 
     void Update()
     {
@@ -15,7 +15,3 @@ public class PlayerMovement : MonoBehaviour
    
 }
 
-internal class SerializedFieldAttribute : Attribute
-{
-
-}
