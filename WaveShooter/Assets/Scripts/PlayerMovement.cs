@@ -1,17 +1,19 @@
-using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-  [SerializeField] public float forwardSpeed = 10f;
-  [SerializeField] public float sideSpeed = 5f;
+    public float speed = 10f;
+    public float turnSpeed = 80f;
 
     void Update()
     {
-        transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+        // vooruit
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+
+        // draaien
         float horizontal = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * horizontal * sideSpeed * Time.deltaTime);
+
+        transform.Rotate(Vector3.up * horizontal * turnSpeed * Time.deltaTime);
     }
-   
 }
 
