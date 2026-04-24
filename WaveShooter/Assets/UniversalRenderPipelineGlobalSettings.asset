@@ -68,7 +68,21 @@ MonoBehaviour:
       - rid: 47994052495015940
       - rid: 47994052495015941
     m_RuntimeSettings:
-      m_List: []
+      m_List:
+      - rid: 6777498001314152450
+      - rid: 6777498001314152452
+      - rid: 6777498001314152456
+      - rid: 6777498001314152457
+      - rid: 6777498001314152459
+      - rid: 6777498001314152460
+      - rid: 6777498001314152462
+      - rid: 6777498001314152467
+      - rid: 6777498001314152468
+      - rid: 6777498001314152472
+      - rid: 6777498001314152473
+      - rid: 6777498001314152474
+      - rid: 47994052495015938
+      - rid: 47994052495015939
   m_AssetVersion: 10
   m_ObsoleteDefaultVolumeProfile: {fileID: 0}
   m_RenderingLayerNames:
@@ -309,9 +323,12 @@ MonoBehaviour:
         m_CoreBlitColorAndDepthPS: {fileID: 4800000, guid: d104b2fc1ca6445babb8e90b0758136b,
           type: 3}
         m_SamplingPS: {fileID: 4800000, guid: 04c410c9937594faa893a11dceb85f7e, type: 3}
-        m_TerrainDetailLit: {fileID: 0}
-        m_TerrainDetailGrassBillboard: {fileID: 0}
-        m_TerrainDetailGrass: {fileID: 0}
+        m_TerrainDetailLit: {fileID: 4800000, guid: f6783ab646d374f94b199774402a5144,
+          type: 3}
+        m_TerrainDetailGrassBillboard: {fileID: 4800000, guid: 29868e73b638e48ca99a19ea58c48d90,
+          type: 3}
+        m_TerrainDetailGrass: {fileID: 4800000, guid: e507fdfead5ca47e8b9a768b51c291a1,
+          type: 3}
     - rid: 6777498001314152458
       type: {class: ScreenSpaceAmbientOcclusionDynamicResources, ns: UnityEngine.Rendering.Universal,
         asm: Unity.RenderPipelines.Universal.Runtime}
