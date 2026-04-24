@@ -48634,8 +48634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cbd973e4a9634b8f343df6cc1dd80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 10
-  turnSpeed: 80
+  speed: 2
+  turnSpeed: 20
 --- !u!4 &1781188246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2530c7a6d0fbe304ab104d4d44b6bdd8,
@@ -53287,7 +53287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   player: {fileID: 1781188246}
-  offset: {x: 0, y: 5, z: -8}
+  offset: {x: 0, y: 7, z: -14}
 --- !u!1001 &1932800349
 PrefabInstance:
   m_ObjectHideFlags: 0
