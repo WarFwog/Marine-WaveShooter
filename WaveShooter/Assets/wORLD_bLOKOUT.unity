@@ -51099,6 +51099,7 @@ GameObject:
   - component: {fileID: 1850976146}
   - component: {fileID: 1850976147}
   - component: {fileID: 1850976148}
+  - component: {fileID: 1850976149}
   m_Layer: 5
   m_Name: Healthbar
   m_TagString: Untagged
@@ -51191,6 +51192,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthBar
   healthSlider: {fileID: 1850976147}
+--- !u!114 &1850976149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850976145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4621535aae9e70e4bb6f39866fc4feb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  maxHealth: 100
+  healthBar: {fileID: 1850976148}
 --- !u!1001 &1856234572
 PrefabInstance:
   m_ObjectHideFlags: 0
