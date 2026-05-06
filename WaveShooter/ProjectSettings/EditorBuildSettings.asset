@@ -6,13 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Scenes/SampleScene.unity
+    path: Assets/02_Scenes/01_Worldblokout/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Scenes/Main Menu.unity
+    path: Assets/02_Scenes/01_Worldblokout/Scenes/Main Menu.unity
     guid: 8564da3995f9ed941b68f8c96702bbc9
   - enabled: 1
-    path: Assets/Scenes/Scenes/wORLD_bLOKOUT.unity
+    path: Assets/02_Scenes/01_Worldblokout/Scenes/wORLD_bLOKOUT.unity
     guid: 9fc2af4c236d780478a7d91ce3ea19e4
   m_configObjects: {}
-  m_UseUCBPForAssetBundles: 0
