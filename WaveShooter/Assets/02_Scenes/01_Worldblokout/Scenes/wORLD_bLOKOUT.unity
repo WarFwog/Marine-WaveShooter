@@ -1967,7 +1967,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 58297715}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:WaveShooter/Assets/02_Scenes/01_Worldblokout/Scenes/wORLD_bLOKOUT.unity
+
 --- !u!1 &58441324
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,97 +2043,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58441324}
   m_CullTransparentMesh: 1
-========
---- !u!1001 &58407480
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1560786984}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1367.0474
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1367.0474
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1367.0472
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -127.50043
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -11.38622
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -32.17021
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.16879041
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.16879015
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.68666625
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.68666524
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -207.62
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-        type: 3}
-      propertyPath: m_Name
-      value: Blokout_steen_02 (5)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 10922dc9e9d6ac24ab90a964574ebc3f, type: 3}
---- !u!4 &58407481 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 10922dc9e9d6ac24ab90a964574ebc3f,
-    type: 3}
-  m_PrefabInstance: {fileID: 58407480}
-  m_PrefabAsset: {fileID: 0}
->>>>>>>> Feature-MergeReady-All-Models:WaveShooter/Assets/02_Scenes/01_Worldblokout/01_wORLD_bLOKOUT.unity
+
 --- !u!1001 &58953838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51440,7 +51350,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1780592926}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:WaveShooter/Assets/02_Scenes/01_Worldblokout/Scenes/wORLD_bLOKOUT.unity
+
 --- !u!1 &1781188244 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2530c7a6d0fbe304ab104d4d44b6bdd8,
@@ -51467,8 +51377,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1929859043}
   m_PrefabAsset: {fileID: 0}
-========
->>>>>>>> Feature-MergeReady-All-Models:WaveShooter/Assets/02_Scenes/01_Worldblokout/01_wORLD_bLOKOUT.unity
+
 --- !u!1001 &1782511481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55797,7 +55706,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1928004079}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:WaveShooter/Assets/02_Scenes/01_Worldblokout/Scenes/wORLD_bLOKOUT.unity
+
 --- !u!1001 &1929859043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55875,8 +55784,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1781188245}
   m_SourcePrefab: {fileID: 100100000, guid: 2530c7a6d0fbe304ab104d4d44b6bdd8, type: 3}
-========
->>>>>>>> Feature-MergeReady-All-Models:WaveShooter/Assets/02_Scenes/01_Worldblokout/01_wORLD_bLOKOUT.unity
 --- !u!1 &1930145524
 GameObject:
   m_ObjectHideFlags: 0
@@ -56008,7 +55915,6 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930145524}
   serializedVersion: 2
-<<<<<<<< HEAD:WaveShooter/Assets/02_Scenes/01_Worldblokout/Scenes/wORLD_bLOKOUT.unity
   m_LocalRotation: {x: 0.12132718, y: -0.5301524, z: 0.07697328, w: 0.8356395}
   m_LocalPosition: {x: 39.400494, y: 7, z: -15.51972}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -56030,15 +55936,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   player: {fileID: 1781188246}
   offset: {x: 0, y: 7, z: -14}
-========
-  m_LocalRotation: {x: -0.2374739, y: -0.04101428, z: 0.01003613, w: -0.9704758}
-  m_LocalPosition: {x: 0.04, y: 14.47, z: -18.07}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1936739196}
-  m_LocalEulerAnglesHint: {x: 27.5, y: -355.16, z: 0}
->>>>>>>> Feature-MergeReady-All-Models:WaveShooter/Assets/02_Scenes/01_Worldblokout/01_wORLD_bLOKOUT.unity
 --- !u!1001 &1932800349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60563,7 +60460,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2116177470}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:WaveShooter/Assets/02_Scenes/01_Worldblokout/Scenes/wORLD_bLOKOUT.unity
+
 --- !u!1001 &2116888027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60728,8 +60625,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2121359653}
   m_CullTransparentMesh: 1
-========
->>>>>>>> Feature-MergeReady-All-Models:WaveShooter/Assets/02_Scenes/01_Worldblokout/01_wORLD_bLOKOUT.unity
 --- !u!1001 &2121487219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61717,16 +61612,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 811854339}
   - {fileID: 579083674}
-<<<<<<<< HEAD:WaveShooter/Assets/02_Scenes/01_Worldblokout/Scenes/wORLD_bLOKOUT.unity
+
   - {fileID: 1930145528}
   - {fileID: 296930670}
   - {fileID: 742942391}
-========
-  - {fileID: 1560786984}
-  - {fileID: 900333404}
-  - {fileID: 1936739195}
-  - {fileID: 511588966303364405}
-  - {fileID: 2016510079}
-  - {fileID: 1444783166}
-  - {fileID: 8267713447918332997}
->>>>>>>> Feature-MergeReady-All-Models:WaveShooter/Assets/02_Scenes/01_Worldblokout/01_wORLD_bLOKOUT.unity
