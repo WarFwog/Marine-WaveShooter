@@ -31,7 +31,7 @@ public class Rotatable : MonoBehaviour
             //hier neemt de rotatie toe.
           rotation *= speed;
           transform.Rotate(Vector3.up * (inverted? 1: -1), rotation.x, Space.World );
-          transform.Rotate(cam.right * (inverted? -1: 1), rotation.y, Space.World );
+         // transform.Rotate(cam.right * (inverted? -1: 1), rotation.y, Space.World );
             yield return null;
         }
     }

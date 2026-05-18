@@ -794,6 +794,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513318036}
   m_CullTransparentMesh: 1
+--- !u!1 &1587141040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 586e7fb3effda41458d8a244e12b8873,
+    type: 3}
+  m_PrefabInstance: {fileID: 1797402910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1587141041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587141040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48ec2e7a44d2864f8534b3485f5e610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rotatable
+  pressed:
+    m_Name: Pressed
+    m_Type: 1
+    m_ExpectedControlType: Button
+    m_Id: d833b405-e124-44f5-af67-5585da6c753f
+    m_Processors: 
+    m_Interactions: Press
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: f47517e8-b01b-4b50-b0c0-619feea799cd
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pressed
+      m_Flags: 0
+    m_Flags: 0
+  axis:
+    m_Name: Axis
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: 6ce0b938-d810-4b8d-b600-90bb037ae97b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 3071869c-2faf-4bf2-a485-4c02b2e947ac
+      m_Path: <Mouse>/delta
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Axis
+      m_Flags: 0
+    m_Flags: 0
+  speed: 0.3
+  inverted: 0
 --- !u!1001 &1797402910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -866,6 +920,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1587141041}
     - targetCorrespondingSourceObject: {fileID: 1707418865505030121, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
       insertIndex: -1
