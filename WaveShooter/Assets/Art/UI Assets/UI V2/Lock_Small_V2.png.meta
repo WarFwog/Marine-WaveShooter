@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 85d434b43c741a146938b72581b3b50d
+guid: 09284a8233490124ebf3ae0c0e4cdd58
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: test_0
+      name: Lock_V2_0
       rect:
         serializedVersion: 2
-        x: 625
+        x: 1
         y: 0
-        width: 2892
-        height: 612
+        width: 86
+        height: 123
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9396dda128342642b63f1118420e1a3
-      internalID: 562417239
+      spriteID: 637bd0777bdc0d44a863eae2d205bfe8
+      internalID: 651484894
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 735682f2bc45a9b45892870fba8bad15
+    spriteID: 6cbd2a44ea1fcdd4aa3da1f0530393c0
     internalID: 0
     vertices: []
     indices: 
@@ -132,9 +132,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":2892.0,"y":612.0},"gridSpriteOffset":{"x":625.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      test_0: 562417239
+      Lock_V2_0: 651484894
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

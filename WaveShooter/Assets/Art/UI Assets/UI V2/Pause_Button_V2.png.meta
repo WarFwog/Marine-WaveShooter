@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e5d5456a320f4114383fee8f76726707
+guid: dfce8bcd3f83fe3498eecae450260f64
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Middel 32_0
+      name: Pause_Button_V2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1354
-        height: 201
+        width: 88
+        height: 88
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0faec47b51e23e498cbba81ab0772bb
-      internalID: -310427824
+      spriteID: 7a6e7302745469c42bf21b99fb4d0ecc
+      internalID: 1368198041
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0515cb350d3f7814ca85287857fa13fa
+    spriteID: c666dc030bc615f49a93353153bdaeb4
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,7 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Middel 32_0: -310427824
+      Pause_Button_V2_0: 1368198041
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
