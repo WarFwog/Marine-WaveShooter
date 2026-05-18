@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 1513318039}
   - component: {fileID: 1513318038}
   m_Layer: 5
-  m_Name: TurretbUTTON
+  m_Name: TurretButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -694,7 +694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -429, y: -201}
+  m_AnchoredPosition: {x: 419, y: 62}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1513318038
@@ -740,7 +740,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1513318039}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1157293107}
+        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
+        m_MethodName: SelectedWeapon
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6529516044776477425, guid: c0a92548956f36a40881856ddcb394ef,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1513318039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,37 +803,37 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.97071
+      value: 0.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0732403
+      value: -3.52
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.630116
+      value: -0.45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.69800764
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7160903
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
@@ -830,7 +843,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 91.465
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
@@ -878,7 +891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c276336f4b2a97d43abf7bc2128b2fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponPlot
-  currentWeapon: {fileID: 0}
+  currentWeapon: {fileID: 1157293106}
 --- !u!65 &1797402913
 BoxCollider:
   m_ObjectHideFlags: 0
