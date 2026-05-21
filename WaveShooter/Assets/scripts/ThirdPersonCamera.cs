@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GunshipCamera : MonoBehaviour
 {
@@ -6,79 +7,91 @@ public class GunshipCamera : MonoBehaviour
     public Transform target;                    // Your gunship
 
     [Header("Camera Settings")]
-    public float distance = 12f;
-    public float heightOffset = 3f;
-    public float rotationSpeed = 80f;           // How fast camera turns when mouse at edge
+    public float distance = 15f;
+    public float heightOffset = 4f;
+    public float rotationSpeed = 90f;
 
-    [Header("Edge Settings")]
-    public float edgeSize = 50f;                // Pixels from edge before camera starts moving
-    public float deadZone = 100f;               // Center area where mouse does nothing
+    [Header("Edge Panning")]
+    public float edgeSize = 60f;                // How close to edge before panning
 
     [Header("Crosshair")]
     public Texture2D crosshairTexture;
-    public int crosshairSize = 32;
+    public int crosshairSize = 36;
 
     private float yaw = 0f;
-    private float pitch = 15f;
+    private float pitch = 20f;
+
+    // For easy access from other scripts
+    public static GunshipCamera Instance { get; private set; }
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
-        Cursor.visible = true;           // Mouse cursor is visible
-        Cursor.lockState = CursorLockMode.Confined;  // Keep mouse inside game window
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
 
         if (target == null)
-            Debug.LogError("GunshipCamera: Assign your gunship to the Target field!");
+            Debug.LogWarning("GunshipCamera: Target not assigned!");
     }
 
     void LateUpdate()
     {
         if (target == null) return;
 
-        Vector2 mousePos = Input.mousePosition;
-
-        // Calculate how close mouse is to edges
-        float screenWidth = Screen.width;
-        float screenHeight = Screen.height;
+        Vector2 mousePos = Mouse.current.position.ReadValue();
 
         float horizontal = 0f;
         float vertical = 0f;
 
-        // Left / Right edge
-        if (mousePos.x < edgeSize)
-            horizontal = -1f;
-        else if (mousePos.x > screenWidth - edgeSize)
-            horizontal = 1f;
+        // Edge detection
+        if (mousePos.x < edgeSize) horizontal = -1f;
+        else if (mousePos.x > Screen.width - edgeSize) horizontal = 1f;
 
-        // Bottom / Top edge
-        if (mousePos.y < edgeSize)
-            vertical = -1f;
-        else if (mousePos.y > screenHeight - edgeSize)
-            vertical = 1f;
+        if (mousePos.y < edgeSize) vertical = -1f;
+        else if (mousePos.y > Screen.height - edgeSize) vertical = 1f;
 
-        // Apply rotation when mouse is at edges
-        yaw   += horizontal * rotationSpeed * Time.deltaTime;
+        // Rotate camera when mouse is at edge
+        yaw += horizontal * rotationSpeed * Time.deltaTime;
         pitch -= vertical * rotationSpeed * Time.deltaTime;
-        pitch = Mathf.Clamp(pitch, -35f, 60f);
+        pitch = Mathf.Clamp(pitch, -25f, 65f);
 
-        // Position camera behind gunship with rotation
-        Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
-        Vector3 desiredPosition = target.position + rotation * new Vector3(0, heightOffset, -distance);
+        // Position camera
+        Quaternion rotation = Quaternion.Euler(pitch, yaw, 0);
+        Vector3 desiredPos = target.position + rotation * new Vector3(0, heightOffset, -distance);
 
-        transform.position = desiredPosition;
+        transform.position = Vector3.Lerp(transform.position, desiredPos, 8f * Time.deltaTime);
         transform.LookAt(target.position + Vector3.up * 2f);
+    }
+
+    // Helper method for other scripts to get mouse world position
+    public bool GetMouseWorldPosition(out Vector3 worldPos, LayerMask layerMask = default)
+    {
+        Vector2 screenPos = Mouse.current.position.ReadValue();
+        Ray ray = Camera.main.ScreenPointToRay(screenPos);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, 500f, layerMask))
+        {
+            worldPos = hit.point;
+            return true;
+        }
+
+        worldPos = ray.GetPoint(50f); // fallback
+        return false;
     }
 
     void OnGUI()
     {
         if (crosshairTexture == null) return;
 
-        Vector2 center = new Vector2(
-            Input.mousePosition.x,
-            Screen.height - Input.mousePosition.y   // GUI uses top-left as origin
-        );
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+        Vector2 guiPos = new Vector2(mousePos.x, Screen.height - mousePos.y);
 
         float half = crosshairSize / 2f;
-        GUI.DrawTexture(new Rect(center.x - half, center.y - half, crosshairSize, crosshairSize), crosshairTexture);
+        GUI.DrawTexture(new Rect(guiPos.x - half, guiPos.y - half, crosshairSize, crosshairSize), crosshairTexture);
     }
 }
 
