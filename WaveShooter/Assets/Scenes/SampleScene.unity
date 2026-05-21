@@ -271,10 +271,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCamera
   target: {fileID: 1424894602}
   distance: 15
-  sensitivity: 100
-  minVerticalAngle: -30
-  maxVerticalAngle: 60
-  smoothSpeed: 10
+  heightOffset: 4
+  rotationSpeed: 90
+  edgeSize: 60
   crosshairTexture: {fileID: 2800000, guid: 01e03411eb733af4a8d6d247925faf73, type: 3}
   crosshairSize: 24
 --- !u!1 &339238962
@@ -1475,10 +1474,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   target: {fileID: 1424894602}
   distance: 5
-  sensitivity: 100
-  minVerticalAngle: -30
-  maxVerticalAngle: 60
-  smoothSpeed: 10
+  heightOffset: 4
+  rotationSpeed: 90
+  edgeSize: 60
   crosshairTexture: {fileID: 0}
   crosshairSize: 24
 --- !u!4 &1180670080
@@ -1596,6 +1594,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a3a2dee1c8a5d40a3b296b6c1d032b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 51
+  firePoint: {fileID: 1452024456}
+--- !u!4 &1452024456 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -9006549272062162013, guid: c0c9a5f743ec2e640bec55c8bde5bef4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1452024453}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2072362708
 GameObject:
   m_ObjectHideFlags: 0

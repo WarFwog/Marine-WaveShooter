@@ -1,40 +1,82 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GunshipRaycast : MonoBehaviour
+public class GunshipShooting : MonoBehaviour
 {
-    [SerializeField] private LayerMask targetLayer;
-    [SerializeField] private Transform firePoint;   // Optional: where bullets spawn from
+    [Header("Shooting")]
+    [SerializeField] private Transform _firePoint;
+    [SerializeField] private GameObject _projectilePrefab;
+    [SerializeField] private float _fireRate = 0.15f;
+    [SerializeField] private LayerMask _targetLayer;
 
-    private InputAction tapAction;
+    [Header("Particle Effects")]
+    [SerializeField] private ParticleSystem _muzzleFlashParticles;
 
-    void Awake()
+    private InputAction _shootAction;
+    private float _nextFireTime;
+
+    private void Awake()
     {
-        tapAction = new InputAction("Tap", binding: "<Pointer>/press");
-        tapAction.Enable();
-        tapAction.performed += OnTap;
+        _shootAction = new InputAction("Shoot", binding: "<Pointer>/press");
+        _shootAction.Enable();
+        _shootAction.performed += OnShootPerformed;
     }
 
-    void OnDestroy()
+    private void OnDestroy()
     {
-        tapAction.performed -= OnTap;
-        tapAction.Disable();
+        _shootAction.performed -= OnShootPerformed;
+        _shootAction.Disable();
     }
 
-    private void OnTap(InputAction.CallbackContext ctx)
+    private void OnShootPerformed(InputAction.CallbackContext context)
     {
+        if (Time.time < _nextFireTime) return;
         if (GunshipCamera.Instance == null) return;
 
-        if (GunshipCamera.Instance.GetMouseWorldPosition(out Vector3 hitPoint, targetLayer))
-        {
-            Debug.Log("Hit: " + hitPoint);
+        _nextFireTime = Time.time + _fireRate;
 
-            // Example: Look at target or shoot
-            if (firePoint != null)
-            {
-                firePoint.LookAt(hitPoint);
-                // Spawn bullet / laser here
-            }
+        Shoot();
+    }
+
+    private void Shoot()
+    {
+        if (GunshipCamera.Instance.GetMouseWorldPosition(out Vector3 hitPoint, _targetLayer))
+        {
+            AimAtTarget(hitPoint);
+            PlayMuzzleFlash();
+            FireProjectile(hitPoint);
+        }
+    }
+
+    private void AimAtTarget(Vector3 targetPosition)
+    {
+        if (_firePoint != null)
+        {
+            _firePoint.LookAt(targetPosition);
+        }
+    }
+
+    private void PlayMuzzleFlash()
+    {
+        if (_muzzleFlashParticles != null)
+        {
+            _muzzleFlashParticles.Play();
+        }
+    }
+
+    private void FireProjectile(Vector3 targetPosition)
+    {
+        if (_projectilePrefab == null) return;
+
+        Vector3 spawnPosition = _firePoint != null ? _firePoint.position : transform.position;
+        Quaternion direction = Quaternion.LookRotation(targetPosition - spawnPosition);
+
+        GameObject projectile = Instantiate(_projectilePrefab, spawnPosition, direction);
+
+        Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.linearVelocity = projectile.transform.forward * 80f;
         }
     }
 }
