@@ -2,104 +2,195 @@ using UnityEngine;
 
 public class EnemyWaveManager : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] private GameObject enemyPrefab;
+    [System.Serializable]
+    public class EnemyType
+    {
+        public string enemyName;
+        public GameObject prefab;
+
+        [Range(0f, 1f)]
+        public float spawnWeight = 1f;
+    }
+
+    [Header("Enemy Types")]
+    public EnemyType[] enemyTypes;
+
+    [Header("Spawn Points")]
     [SerializeField] private Transform[] spawnPoints;
+
+    [Header("Player")]
     [SerializeField] private Transform player;
 
-    [Header("Wave Settings")]
+    [Header("Game Settings")]
     [SerializeField] private float gameDuration = 300f;
-    [SerializeField] private float waveIntervalStart = 10f;
-    [SerializeField] private float waveIntervalMin = 3f;
-    [SerializeField] private int baseEnemiesPerWave = 2;
+
+    [Header("Wave Settings")]
+    [SerializeField] private float startSpawnInterval = 4f;
+    [SerializeField] private float minimumSpawnInterval = 1f;
+
+    [SerializeField] private int startEnemiesPerWave = 2;
+    [SerializeField] private int maxEnemiesPerWave = 15;
 
     [Header("Difficulty Scaling")]
-    [SerializeField] private float healthGrowthPerMinute = 0.20f;
-    [SerializeField] private float speedGrowthPerMinute = 0.10f;
-    [SerializeField] private float fireRateGrowthPerMinute = 0.10f;
-    [SerializeField] private float weightGrowthPerMinute = 0.05f;
+    [SerializeField] private float healthMultiplierPerMinute = 0.25f;
+    [SerializeField] private float speedMultiplierPerMinute = 0.08f;
+    [SerializeField] private float fireRateMultiplierPerMinute = 0.10f;
 
-    private float _elapsedTime;
-    private float _nextWaveTime;
-    private bool _gameEnded;
+    private float elapsedTime;
+    private float nextWaveTime;
+    private bool gameEnded;
 
     private void Start()
     {
         if (player == null)
         {
-            var playerObj = GameObject.FindGameObjectWithTag("Player");
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+
             if (playerObj != null)
             {
                 player = playerObj.transform;
             }
         }
 
-        _nextWaveTime = waveIntervalStart;
+        nextWaveTime = startSpawnInterval;
     }
 
     private void Update()
     {
-        if (_gameEnded) return;
+        if (gameEnded)
+            return;
 
-        _elapsedTime += Time.deltaTime;
+        elapsedTime += Time.deltaTime;
 
-        if (_elapsedTime >= gameDuration)
+        if (elapsedTime >= gameDuration)
         {
             EndGame();
             return;
         }
 
-        if (!(_elapsedTime >= _nextWaveTime)) return;
-        SpawnWave();
-        _nextWaveTime = _elapsedTime + GetCurrentWaveInterval();
+        if (elapsedTime >= nextWaveTime)
+        {
+            SpawnWave();
+
+            nextWaveTime = elapsedTime + GetSpawnInterval();
+        }
     }
 
     private void SpawnWave()
     {
-        var waveNumber = Mathf.FloorToInt(_elapsedTime / 30f) + 1;
-        var enemyCount = baseEnemiesPerWave + waveNumber;
+        int enemyCount = GetEnemyCount();
 
-        for (var i = 0; i < enemyCount; i++)
+        for (int i = 0; i < enemyCount; i++)
         {
-            var spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-            var enemyObj = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
-
-            var stats = enemyObj.GetComponent<EnemyStats>();
-            var movement = enemyObj.GetComponent<EnemyMovement>();
-            var shooting = enemyObj.GetComponent<EnemyShooting>();
-
-            if (stats != null)
-            {
-                var minutesPassed = _elapsedTime / 60f;
-
-                stats.maxHealth *= 1f + (healthGrowthPerMinute * minutesPassed);
-                stats.moveSpeed *= 1f + (speedGrowthPerMinute * minutesPassed);
-                stats.turnSpeed *= 1f + (speedGrowthPerMinute * minutesPassed);
-                stats.weight *= 1f + (weightGrowthPerMinute * minutesPassed);
-                stats.fireRate *= 1f + (fireRateGrowthPerMinute * minutesPassed);
-            }
-
-            if (movement != null)
-            {
-                movement.SetTarget(player);
-            }
-
-            if (shooting != null)
-            {
-                shooting.SetTarget(player);
-            }
+            SpawnEnemy();
         }
     }
 
-    private float GetCurrentWaveInterval()
+    private void SpawnEnemy()
     {
-        var t = Mathf.Clamp01(_elapsedTime / gameDuration);
-        return Mathf.Lerp(waveIntervalStart, waveIntervalMin, t);
+        if (enemyTypes.Length == 0 || spawnPoints.Length == 0)
+            return;
+
+        EnemyType selectedEnemy = GetRandomEnemyType();
+
+        Transform spawnPoint =
+            spawnPoints[Random.Range(0, spawnPoints.Length)];
+
+        GameObject enemyObj =
+            Instantiate(
+                selectedEnemy.prefab,
+                spawnPoint.position,
+                spawnPoint.rotation);
+
+        EnemyStats stats = enemyObj.GetComponent<EnemyStats>();
+
+        if (stats != null)
+        {
+            ApplyDifficultyScaling(stats);
+        }
+
+        EnemyMovement movement =
+            enemyObj.GetComponent<EnemyMovement>();
+
+        if (movement != null)
+        {
+            movement.SetTarget(player);
+        }
+
+        EnemyShooting shooting =
+            enemyObj.GetComponent<EnemyShooting>();
+
+        if (shooting != null)
+        {
+            shooting.SetTarget(player);
+        }
+    }
+
+    private EnemyType GetRandomEnemyType()
+    {
+        float totalWeight = 0f;
+
+        foreach (EnemyType enemy in enemyTypes)
+        {
+            totalWeight += enemy.spawnWeight;
+        }
+
+        float randomValue = Random.Range(0f, totalWeight);
+
+        float currentWeight = 0f;
+
+        foreach (EnemyType enemy in enemyTypes)
+        {
+            currentWeight += enemy.spawnWeight;
+
+            if (randomValue <= currentWeight)
+            {
+                return enemy;
+            }
+        }
+
+        return enemyTypes[0];
+    }
+
+    private void ApplyDifficultyScaling(EnemyStats stats)
+    {
+        float minutesPassed = elapsedTime / 60f;
+
+        stats.maxHealth *=
+            1f + (healthMultiplierPerMinute * minutesPassed);
+
+        stats.moveSpeed *=
+            1f + (speedMultiplierPerMinute * minutesPassed);
+
+        stats.fireRate *=
+            1f + (fireRateMultiplierPerMinute * minutesPassed);
+    }
+
+    private int GetEnemyCount()
+    {
+        float progress = elapsedTime / gameDuration;
+
+        return Mathf.RoundToInt(
+            Mathf.Lerp(
+                startEnemiesPerWave,
+                maxEnemiesPerWave,
+                progress));
+    }
+
+    private float GetSpawnInterval()
+    {
+        float progress = elapsedTime / gameDuration;
+
+        return Mathf.Lerp(
+            startSpawnInterval,
+            minimumSpawnInterval,
+            progress);
     }
 
     private void EndGame()
     {
-        _gameEnded = true;
-        Debug.Log("Game Over - 5 minutes reached");
+        gameEnded = true;
+
+        Debug.Log("5 minutes survived!");
     }
 }
