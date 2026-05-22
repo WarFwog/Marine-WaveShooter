@@ -225,20 +225,6 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
-                    "m_Id": "1a5e15d8c2c044e48ac1b7306bc21ace"
-                },
-                "m_SlotId": 3
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "f0204effbefdbc8cb1a26c9cbe753bf7"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
                     "m_Id": "2ec9bb5e862ba185873927ee9822e906"
                 },
                 "m_SlotId": 3
@@ -694,6 +680,20 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "1a5e15d8c2c044e48ac1b7306bc21ace"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "f27a16f2412ca686a5c004faffe18d2f"
+                },
+                "m_SlotId": 3
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "f0204effbefdbc8cb1a26c9cbe753bf7"
                 },
                 "m_SlotId": 0
             }
@@ -3624,8 +3624,8 @@
     "m_ObjectId": "93e8f77d6dfb4381a3838066c0f3fb55",
     "m_Title": "Horizon Refraction",
     "m_Position": {
-        "x": -530.39990234375,
-        "y": -155.9998779296875
+        "x": -530.0,
+        "y": -154.00003051757813
     }
 }
 
@@ -3724,8 +3724,8 @@
     "m_ObjectId": "985005f5843e440dbcbd314f3939e5a7",
     "m_Title": "Color",
     "m_Position": {
-        "x": -779.9999389648438,
-        "y": -430.39996337890627
+        "x": -779.0000610351563,
+        "y": -429.0000305175781
     }
 }
 
@@ -3767,8 +3767,8 @@
     "m_ObjectId": "9efc8d7d2bef435a9be1647211a13c98",
     "m_Title": "Foam",
     "m_Position": {
-        "x": -1179.199951171875,
-        "y": 212.800048828125
+        "x": -1179.0,
+        "y": 215.0000762939453
     }
 }
 
@@ -5216,8 +5216,8 @@
     "m_ObjectId": "f844aa6f885c41dca23b0212971ebf9b",
     "m_Title": "Transparency",
     "m_Position": {
-        "x": -112.79998779296875,
-        "y": -431.199951171875
+        "x": -112.0,
+        "y": -429.0000305175781
     }
 }
 
