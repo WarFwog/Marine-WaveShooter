@@ -40,8 +40,22 @@ public class GunshipShooting : MonoBehaviour
 
     private void Shoot()
     {
-        if (GunshipCamera.Instance.GetMouseWorldPosition(out Vector3 hitPoint, _targetLayer))
+        // === TEST LOG: Check if we successfully got a world position from the mouse ===
+        bool hitSuccess = GunshipCamera.Instance.GetMouseWorldPosition(out Vector3 hitPoint, _targetLayer);
+
+        if (hitSuccess)
         {
+            Debug.Log($"✅ Raycast SUCCESS - Hit world position: {hitPoint}");
+
+            AimAtTarget(hitPoint);
+            PlayMuzzleFlash();
+            FireProjectile(hitPoint);
+        }
+        else
+        {
+            Debug.Log($"⚠️ Raycast FAILED - No hit detected. Using fallback position.");
+            
+            // Still try to shoot even if no physics hit
             AimAtTarget(hitPoint);
             PlayMuzzleFlash();
             FireProjectile(hitPoint);
@@ -53,6 +67,7 @@ public class GunshipShooting : MonoBehaviour
         if (_firePoint != null)
         {
             _firePoint.LookAt(targetPosition);
+            Debug.Log($"Gun aimed at position: {targetPosition}");
         }
     }
 
@@ -61,12 +76,17 @@ public class GunshipShooting : MonoBehaviour
         if (_muzzleFlashParticles != null)
         {
             _muzzleFlashParticles.Play();
+            Debug.Log("Muzzle flash played");
         }
     }
 
     private void FireProjectile(Vector3 targetPosition)
     {
-        if (_projectilePrefab == null) return;
+        if (_projectilePrefab == null) 
+        {
+            Debug.LogWarning("No projectile prefab assigned!");
+            return;
+        }
 
         Vector3 spawnPosition = _firePoint != null ? _firePoint.position : transform.position;
         Quaternion direction = Quaternion.LookRotation(targetPosition - spawnPosition);
@@ -77,6 +97,7 @@ public class GunshipShooting : MonoBehaviour
         if (rb != null)
         {
             rb.linearVelocity = projectile.transform.forward * 80f;
+            Debug.Log($"Projectile fired towards {targetPosition}");
         }
     }
 }
