@@ -6,25 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/02_Scenes/01_Worldblokout/Scenes/SampleScene.unity
+    path: Assets/Scenes/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
-    path: Assets/02_Scenes/01_Worldblokout/Scenes/Main Menu.unity
+    path: Assets/Scenes/Scenes/Main Menu.unity
     guid: 8564da3995f9ed941b68f8c96702bbc9
   - enabled: 0
-    path: Assets/02_Scenes/01_Worldblokout/Scenes/wORLD_bLOKOUT.unity
+    path: Assets/Scenes/Scenes/wORLD_bLOKOUT 1.unity
     guid: 9fc2af4c236d780478a7d91ce3ea19e4
   - enabled: 1
-    path: Assets/02_Scenes/01_Worldblokout/Scenes/1 UI Main Menu.unity
+    path: Assets/Scenes/Scenes/1 UI Main Menu.unity
     guid: 45889294dfb2fc441b2c24533fe09096
   - enabled: 1
-    path: Assets/02_Scenes/01_Worldblokout/Scenes/2 UI Difficulty picker.unity
+    path: Assets/Scenes/Scenes/2 UI Difficulty picker.unity
     guid: 7091c52bdf8a8d1409d94815feddfb20
   - enabled: 1
-    path: Assets/02_Scenes/01_Worldblokout/Scenes/Costumize.unity
+    path: Assets/Scenes/Scenes/Costumize.unity
     guid: 33107216b48c4ae4fb5306be2cf86d32
   - enabled: 1
-    path: Assets/02_Scenes/01_Worldblokout/Scenes/Play Scene.unity
+    path: Assets/Scenes/Scenes/Play Scene.unity
     guid: 8948cbcb05d47844c9d775595df3786a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
