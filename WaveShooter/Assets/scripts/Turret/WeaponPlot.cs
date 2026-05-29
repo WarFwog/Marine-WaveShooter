@@ -3,6 +3,7 @@ using UnityEngine;
 public class WeaponPlot : MonoBehaviour
 {
     public GameObject currentWeapon;
+    public int plotIndex;
 
     public void BuildWeapon(GameObject weaponPrefab)
     {
@@ -19,6 +20,14 @@ public class WeaponPlot : MonoBehaviour
 
         currentWeapon.transform.localPosition = Vector3.zero;
         currentWeapon.transform.localRotation = Quaternion.identity;
+        if (plotIndex < 0 || plotIndex >= GameControl.Instance.selectedTurretsPerPlot.Length)
+        {
+            return;
+        }
+        GameControl.Instance.selectedTurretsPerPlot[plotIndex] = GameControl.Instance.selectedTurretIndex;
+   
+
+
     }
 
     private void OnMouseDown()

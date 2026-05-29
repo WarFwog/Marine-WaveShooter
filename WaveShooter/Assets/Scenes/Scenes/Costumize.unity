@@ -655,6 +655,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &645420308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2335622170932168031, guid: 586e7fb3effda41458d8a244e12b8873,
+    type: 3}
+  m_PrefabInstance: {fileID: 1797402910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &645420312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645420308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c276336f4b2a97d43abf7bc2128b2fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponPlot
+  currentWeapon: {fileID: 0}
+  plotIndex: 2
+--- !u!65 &645420313
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645420308}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0034642804, y: 0.0032030968, z: 0.00054378714}
+  m_Center: {x: 0, y: -0.0000000027939677, z: 7.2759576e-11}
 --- !u!1 &670014582
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +725,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44f8f5db6cd13d43a6b2cf67cb17504, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameControl
-  Turret: 1
+  selectedShipIndex: 0
+  selectedTurretIndex: 0
+  selectedTurretsPerPlot: 000000000000000000000000000000000000000000000000
 --- !u!4 &670014584
 Transform:
   m_ObjectHideFlags: 0
@@ -843,6 +886,7 @@ GameObject:
   m_Component:
   - component: {fileID: 820625139}
   - component: {fileID: 820625138}
+  - component: {fileID: 820625140}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -930,6 +974,123 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &820625140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820625137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
+--- !u!1 &961803320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2718194982047410035, guid: 586e7fb3effda41458d8a244e12b8873,
+    type: 3}
+  m_PrefabInstance: {fileID: 1797402910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &961803324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961803320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c276336f4b2a97d43abf7bc2128b2fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponPlot
+  currentWeapon: {fileID: 0}
+  plotIndex: 3
+--- !u!65 &961803325
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961803320}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0034642804, y: 0.0032030968, z: 0.00054378714}
+  m_Center: {x: 0.0019707743, y: -9.313226e-10, z: -1.6007107e-10}
+--- !u!1 &1050944004 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1042581808118513368, guid: 38fb4d16cee739b488d4949e4fb47100,
+    type: 3}
+  m_PrefabInstance: {fileID: 3373707477565883971}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1083248247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7968526979641160358, guid: 586e7fb3effda41458d8a244e12b8873,
+    type: 3}
+  m_PrefabInstance: {fileID: 1797402910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1083248251
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083248247}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0034642804, y: 0.0032030968, z: 0.00054378714}
+  m_Center: {x: 0.0019707743, y: -2.2925181e-24, z: -3.929017e-10}
+--- !u!114 &1083248252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083248247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c276336f4b2a97d43abf7bc2128b2fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponPlot
+  currentWeapon: {fileID: 0}
+  plotIndex: 4
 --- !u!1 &1157293106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,6 +1185,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a567e3d1c2280d8488292d3361153907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Buttons
+--- !u!1 &1215135198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2022879730149729984, guid: 586e7fb3effda41458d8a244e12b8873,
+    type: 3}
+  m_PrefabInstance: {fileID: 1797402910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1215135202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215135198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c276336f4b2a97d43abf7bc2128b2fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponPlot
+  currentWeapon: {fileID: 0}
+  plotIndex: 5
+--- !u!65 &1215135203
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215135198}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0034642804, y: 0.0032030968, z: 0.0005437871}
+  m_Center: {x: 0, y: -2.2925181e-24, z: 7.712515e-10}
 --- !u!1 &1513318036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,14 +1309,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1157293107}
-        m_TargetAssemblyTypeName: ShopManager, Assembly-CSharp
-        m_MethodName: SelectedWeapon
-        m_Mode: 2
+      - m_Target: {fileID: 1651734789}
+        m_TargetAssemblyTypeName: ShipCollector, Assembly-CSharp
+        m_MethodName: ChooseTurret
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 1042581808118513368, guid: 38fb4d16cee739b488d4949e4fb47100,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1212,19 +1413,93 @@ MonoBehaviour:
     m_Flags: 0
   speed: 0.3
   inverted: 0
---- !u!114 &1587141043
+--- !u!1 &1614923602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7512958803676844916, guid: 586e7fb3effda41458d8a244e12b8873,
+    type: 3}
+  m_PrefabInstance: {fileID: 1797402910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1614923606
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614923602}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0034642804, y: 0.0032030968, z: 0.0005437871}
+  m_Center: {x: -1.1641532e-10, y: -0.0000000018626451, z: 7.712515e-10}
+--- !u!114 &1614923607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1587141040}
+  m_GameObject: {fileID: 1614923602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a44f8f5db6cd13d43a6b2cf67cb17504, type: 3}
+  m_Script: {fileID: 11500000, guid: c276336f4b2a97d43abf7bc2128b2fdc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameControl
-  Turret: 1
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponPlot
+  currentWeapon: {fileID: 0}
+  plotIndex: 1
+--- !u!1 &1651734788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1651734790}
+  - component: {fileID: 1651734789}
+  m_Layer: 0
+  m_Name: ShipCollector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1651734789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651734788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c434efb5058a6244a9af25d7e2f1455a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShipCollector
+  turretPrefab:
+  - {fileID: 1050944004}
+--- !u!4 &1651734790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651734788}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.85329, y: 0, z: -2.86368}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1797402910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1283,6 +1558,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2718194982047410035, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon Plot 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -2335622170932168031, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon Plot 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2022879730149729984, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon Plot 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
       propertyPath: m_Name
@@ -1293,6 +1583,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Weapon Plot 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7512958803676844916, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon Plot 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968526979641160358, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      propertyPath: m_Name
+      value: Weapon Plot 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1301,10 +1601,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1587141041}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 586e7fb3effda41458d8a244e12b8873,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1587141043}
     - targetCorrespondingSourceObject: {fileID: 1707418865505030121, guid: 586e7fb3effda41458d8a244e12b8873,
         type: 3}
       insertIndex: -1
@@ -1313,6 +1609,46 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1797402912}
+    - targetCorrespondingSourceObject: {fileID: -2022879730149729984, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1215135203}
+    - targetCorrespondingSourceObject: {fileID: -2022879730149729984, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1215135202}
+    - targetCorrespondingSourceObject: {fileID: -2335622170932168031, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 645420313}
+    - targetCorrespondingSourceObject: {fileID: -2335622170932168031, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 645420312}
+    - targetCorrespondingSourceObject: {fileID: -2718194982047410035, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 961803325}
+    - targetCorrespondingSourceObject: {fileID: -2718194982047410035, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 961803324}
+    - targetCorrespondingSourceObject: {fileID: 7968526979641160358, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1083248252}
+    - targetCorrespondingSourceObject: {fileID: 7968526979641160358, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1083248251}
+    - targetCorrespondingSourceObject: {fileID: 7512958803676844916, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1614923607}
+    - targetCorrespondingSourceObject: {fileID: 7512958803676844916, guid: 586e7fb3effda41458d8a244e12b8873,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1614923606}
   m_SourcePrefab: {fileID: 100100000, guid: 586e7fb3effda41458d8a244e12b8873, type: 3}
 --- !u!1 &1797402911 stripped
 GameObject:
@@ -1332,7 +1668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c276336f4b2a97d43abf7bc2128b2fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponPlot
-  currentWeapon: {fileID: 1157293106}
+  currentWeapon: {fileID: 0}
+  plotIndex: 0
 --- !u!65 &1797402913
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1434,3 +1771,4 @@ SceneRoots:
   - {fileID: 149566585}
   - {fileID: 3373707477565883971}
   - {fileID: 670014584}
+  - {fileID: 1651734790}

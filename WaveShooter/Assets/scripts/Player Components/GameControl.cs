@@ -2,28 +2,33 @@ using UnityEngine;
 
 public class GameControl : MonoBehaviour
 {
-    public static GameControl control;
-    public float Turret;
+    public static GameControl Instance;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
+    public int selectedShipIndex;
+    public int selectedTurretIndex;
+    public int[] selectedTurretsPerPlot = new int[6];
+
+    private void Awake()
     {
-        // if (control == null)
+        if (Instance != null && Instance != this)
         {
-
-            DontDestroyOnLoad(gameObject);
-            //control = this;
-            // }
-            //  else if(control != this)
-            {
-                // Destroy(gameObject);
-            }
+            
+            Destroy(gameObject);
+            return;
         }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+        for (int i = 0; i < selectedTurretsPerPlot.Length; i++) {
+            selectedTurretsPerPlot[i] = -1;
         }
+    }
+
+    public void SetShip(int index)
+    {
+        selectedShipIndex = index;
+    }
+    public void SetTurret(int index)
+    {
+        selectedTurretIndex = index;
     }
 }
