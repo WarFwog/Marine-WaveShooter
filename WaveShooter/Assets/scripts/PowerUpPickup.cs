@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,8 +10,12 @@ public class PowerUpPickup : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private bool destroyOnPickup = true;   // Should the power-up disappear when collected?
 
+    [Header("References")]
+    [SerializeField] private ParticleSystem pickupParticle;
+
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log($"Touched by {other.gameObject.name} & tag of player = {other.tag}");
         // Check if the object that touched this power-up is the player
         if (other.CompareTag("Player"))
         {
@@ -22,9 +27,15 @@ public class PowerUpPickup : MonoBehaviour
             // Destroy the power-up
             if (destroyOnPickup)
             {
-                Destroy(gameObject);
+                StartCoroutine(WaitForParticleCompletionAndDestroy());
             }
         }
+    }
+
+    private IEnumerator WaitForParticleCompletionAndDestroy()
+    {
+        yield return new WaitForSeconds(pickupParticle.duration);
+        Destroy(gameObject);
     }
 
     // Optional: Also support mouse click or other interactions
