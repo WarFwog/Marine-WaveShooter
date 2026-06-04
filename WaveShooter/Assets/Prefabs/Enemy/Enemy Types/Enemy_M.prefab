@@ -190,7 +190,6 @@ GameObject:
   - component: {fileID: 5794904020507901519}
   - component: {fileID: 4992044438774081839}
   - component: {fileID: 6441597199017333411}
-  - component: {fileID: 9134302331128926197}
   m_Layer: 0
   m_Name: Enemy_M
   m_TagString: Untagged
@@ -252,22 +251,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   target: {fileID: 0}
---- !u!114 &9134302331128926197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5440888385594557725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dfacbff9c1296a418ee13b492e97eea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyShooting
-  target: {fileID: 0}
-  firePoint: {fileID: 8140685142425466241}
-  projectilePrefab: {fileID: 7490519633240224359, guid: 989cb34d1cdc0264db5076fa1d06145b,
-    type: 3}
 --- !u!1 &7098298011303645748
 GameObject:
   m_ObjectHideFlags: 0
