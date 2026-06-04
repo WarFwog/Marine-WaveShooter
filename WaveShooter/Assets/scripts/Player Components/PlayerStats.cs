@@ -18,6 +18,13 @@ public class PlayerStats : MonoBehaviour
     {
         currentHealth -= amount;
         healthBar.SetSlider(currentHealth);
+        if (currentHealth <= 0)
+            EndGame();
+    }
+
+    private void EndGame()
+    {
+        
     }
 
     private void Update()
