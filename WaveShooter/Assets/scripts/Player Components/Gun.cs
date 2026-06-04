@@ -1,24 +1,34 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
 
     [Header("References")]
-    [SerializeField] private Transform Rotationpoint;
+    [SerializeField] private Transform rotationPoint;
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private Transform gunpoint;
+    [SerializeField] private Transform gunPoint;
     [SerializeField] private LayerMask enemyMask;
 
     [Header("Attributes")]
     [SerializeField] private float targetInRange = 4f;
-    [SerializeField] private float rotationspeed = 5f;
+    [SerializeField] private float rotationspeed = 90f;
     [SerializeField] private float bulletPerSecond = 1f;
-    [SerializeField] private Transform target;
-    [SerializeField] private float timeUntilFire;
+    private Transform _target;
+    private float _timeUntilFire;
+    private float _startXRotation;
+    private float _startZRotation;
+
+
+    private void Start()
+    {
+        _startXRotation = transform.eulerAngles.x;
+        _startZRotation = transform.eulerAngles.z;
+    }
 
     private void Update()
     {
-        if (target == null)
+        if (_target == null)
         {
             FindTarget();
             return;
@@ -27,15 +37,15 @@ public class Gun : MonoBehaviour
 
         if (!CheckTargetIsInRange())
         {
-            target = null;
+            _target = null;
         }
         else
         {
-            timeUntilFire += Time.deltaTime;
-            if (timeUntilFire >= 1f / bulletPerSecond)
+            _timeUntilFire += Time.deltaTime;
+            if (_timeUntilFire >= 1f / bulletPerSecond)
             {
                 Shoot();
-                timeUntilFire = 0f;
+                _timeUntilFire = 0f;
             }
 
         }
@@ -43,29 +53,51 @@ public class Gun : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject bulletB = Instantiate(bulletPrefab, gunpoint.position, Quaternion.identity);
+        Debug.Log("Turret schiet");
+        GameObject bulletB = Instantiate(bulletPrefab, gunPoint.position, Quaternion.identity);
         Bullet bulletscript = bulletB.GetComponent<Bullet>();
-        bulletscript.SetTarget(target);
+        bulletscript.SetTarget(_target);
+        Debug.Log("Pew Pew");
     }
 
     private void FindTarget()
     {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetInRange, (Vector2)
-            transform.position, 0f, enemyMask);
-        if (hits.Length > 0)
+        Collider[] hits = Physics.OverlapSphere(transform.position, targetInRange, enemyMask);
+        if (hits.Length <= 0 )
         {
-            target = hits[0].transform;
+            return;
         }
+
+        _target = hits[0].transform;
+
+        Debug.Log("Enemy gevonden: " + hits[0].name);
     }
     private bool CheckTargetIsInRange()
     {
-        return Vector2.Distance(target.position, transform.position) <= targetInRange;
+        float distance = Vector3.Distance(_target.position, transform.position);
+
+        Debug.Log("Distance to target: " + distance);
+
+        return distance <= targetInRange;
+
     }
+
     private void RotateTowardsTarget()
     {
-        float angle = Mathf.Atan2(target.position.y - transform.position.y, target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
+        Vector3 direction = _target.position - transform.position;
+        direction.y = 0f;
 
-        Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        Rotationpoint.rotation = Quaternion.RotateTowards(Rotationpoint.rotation, targetRotation, rotationspeed * Time.deltaTime);
+        if(direction == Vector3.zero)
+        {
+            return;
+        }
+
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        float targetYRotation = lookRotation.eulerAngles.y;
+        Quaternion targetRotation = Quaternion.Euler(_startXRotation, targetYRotation, _startZRotation);
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationspeed * Time.deltaTime);
     }
+   
 }
+

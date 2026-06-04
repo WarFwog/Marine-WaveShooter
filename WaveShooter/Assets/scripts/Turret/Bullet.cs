@@ -19,15 +19,25 @@ public class Bullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!target) return;
+        if (target == null)
+        
+            {
+                Destroy(gameObject);
+                return;
+            }
 
-        Vector2 direction = (target.position - transform.position).normalized;
-        rb.linearVelocity = direction * bulletSpeed;
-    }
- 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-       // other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
+            Vector3 direction = (target.position - transform.position).normalized;
+            rb.linearVelocity = direction * bulletSpeed;
+        } 
+
+        private void OnCollisionEnter(Collision collision) {
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+        if (enemy != null) 
+        {
+            enemy.TakeDamage(bulletDamage);
+        }
+
         Destroy(gameObject);
     }
 }
+
