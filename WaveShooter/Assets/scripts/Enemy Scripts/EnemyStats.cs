@@ -22,7 +22,7 @@ public class EnemyStats : MonoBehaviour
         currentHealth = maxHealth;
     }
     
-    public virtual void TakeDamage(float amount)
+    public void TakeDamage(float amount)
     {
         currentHealth -= amount;
 

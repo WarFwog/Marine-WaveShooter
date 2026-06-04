@@ -656,11 +656,7 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8140685142425466241}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 27fef92a6b89768449aefaeb0411b724,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6034016107776397122}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27fef92a6b89768449aefaeb0411b724, type: 3}
 --- !u!4 &1304936711386674981 stripped
 Transform:
@@ -668,24 +664,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1555615967775346894}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1826141113738718623 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 27fef92a6b89768449aefaeb0411b724,
-    type: 3}
-  m_PrefabInstance: {fileID: 1555615967775346894}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6034016107776397122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1826141113738718623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc9bfa400433dc5448c4acb99267b46b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyTurret
-  firePoint: {fileID: 8140685142425466241}
-  projectilePrefab: {fileID: 7490519633240224359, guid: 989cb34d1cdc0264db5076fa1d06145b,
-    type: 3}

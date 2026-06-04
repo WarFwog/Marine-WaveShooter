@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 1131586583954886214}
   - component: {fileID: 5117905988196084208}
   - component: {fileID: 5368155843106863867}
+  - component: {fileID: 6594296850184965797}
   m_Layer: 0
   m_Name: Enemy_L
   m_TagString: Untagged
@@ -196,6 +197,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   target: {fileID: 0}
+--- !u!114 &6594296850184965797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3349295101817820612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dfacbff9c1296a418ee13b492e97eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyShooting
+  target: {fileID: 0}
+  firePoint: {fileID: 8651189995631805364}
+  projectilePrefab: {fileID: 7490519633240224359, guid: 989cb34d1cdc0264db5076fa1d06145b,
+    type: 3}
 --- !u!1 &3804204607540870410
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,11 +963,7 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8651189995631805364}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 27fef92a6b89768449aefaeb0411b724,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3147671796826236989}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27fef92a6b89768449aefaeb0411b724, type: 3}
 --- !u!4 &2792780340063822995 stripped
 Transform:
@@ -958,24 +971,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2399094314116285304}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3281472939777769001 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 27fef92a6b89768449aefaeb0411b724,
-    type: 3}
-  m_PrefabInstance: {fileID: 2399094314116285304}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3147671796826236989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3281472939777769001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc9bfa400433dc5448c4acb99267b46b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyTurret
-  firePoint: {fileID: 8651189995631805364}
-  projectilePrefab: {fileID: 7490519633240224359, guid: 989cb34d1cdc0264db5076fa1d06145b,
-    type: 3}

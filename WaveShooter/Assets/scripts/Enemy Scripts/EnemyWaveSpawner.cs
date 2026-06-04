@@ -18,7 +18,6 @@ public class EnemyWaveManager : MonoBehaviour
 
     [Header("Spawn Points")]
     [SerializeField] private Transform[] spawnPoints;
-    [SerializeField] private Transform bossSpawnPoint;
 
     [Header("Player")]
     [SerializeField] private Transform player;
@@ -37,11 +36,7 @@ public class EnemyWaveManager : MonoBehaviour
     [SerializeField] private float healthMultiplierPerMinute = 0.25f;
     [SerializeField] private float speedMultiplierPerMinute = 0.08f;
     [SerializeField] private float fireRateMultiplierPerMinute = 0.10f;
-    
-    [Header("Boss")]
-    [SerializeField] private GameObject bossPrefab;
 
-    private bool _bossSpawned;
     private float _elapsedTime;
     private float _nextWaveTime;
     private bool _gameEnded;
@@ -62,20 +57,13 @@ public class EnemyWaveManager : MonoBehaviour
 
     private void Update()
     {
-        if (_gameEnded) return;
-        if (_elapsedTime >= gameDuration)
-        {
-            if (_bossSpawned) return;
-            SpawnBoss();
-            _bossSpawned = true;
+        if (_gameEnded)
             return;
-        }
 
         _elapsedTime += Time.deltaTime;
-        if (_elapsedTime >= gameDuration && !_bossSpawned)
+        if (_elapsedTime >= gameDuration)
         {
-            SpawnBoss();
-            _bossSpawned = true;
+            EndGame();
             return;
         }
 
@@ -97,7 +85,8 @@ public class EnemyWaveManager : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        if (enemyTypes.Length == 0 || spawnPoints.Length == 0) return;
+        if (enemyTypes.Length == 0 || spawnPoints.Length == 0)
+            return;
 
         var selectedEnemy = GetRandomEnemyType();
         var spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
@@ -115,10 +104,10 @@ public class EnemyWaveManager : MonoBehaviour
             movement.SetTarget(player);
         }
 
-        var turrets = enemyObj.GetComponentsInChildren<EnemyTurret>();
-        foreach (var turret in turrets)
+        var shooting = enemyObj.GetComponent<EnemyShooting>();
+        if (shooting != null)
         {
-            turret.SetTarget(player);
+            shooting.SetTarget(player);
         }
     }
 
@@ -167,24 +156,5 @@ public class EnemyWaveManager : MonoBehaviour
         _gameEnded = true;
         
         Debug.Log("5 minutes survived!"); //vervangen voor win method
-    }
-    
-    private void SpawnBoss()
-    {
-        var boss = Instantiate(bossPrefab, bossSpawnPoint.position, bossSpawnPoint.rotation);
-
-        var movement = boss.GetComponent<EnemyMovement>();
-
-        if (movement != null)
-            movement.SetTarget(player);
-
-        var turrets = boss.GetComponentsInChildren<EnemyTurret>();
-
-        foreach (var turret in turrets)
-        {
-            turret.SetTarget(player);
-        }
-
-        Debug.Log("Boss spawned!");
     }
 }
