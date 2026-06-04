@@ -6104,21 +6104,22 @@ MonoBehaviour:
   - enemyName: Small Enemy
     prefab: {fileID: 5451105975389517391, guid: f45866399eca5c048a1b42ef43ecaed7,
       type: 3}
-    spawnWeight: 0.6
+    spawnWeight: 1
   - enemyName: Medium Enemy
     prefab: {fileID: 5440888385594557725, guid: 88e8c12f582eec541a1835ce3423ce54,
       type: 3}
-    spawnWeight: 0.3
+    spawnWeight: 0
   - enemyName: Large Enemy
     prefab: {fileID: 3349295101817820612, guid: f993251efe69c294eb6438472b60d6c1,
       type: 3}
-    spawnWeight: 0.1
+    spawnWeight: 0
   spawnPoints:
   - {fileID: 645790597}
   - {fileID: 317385374}
   - {fileID: 996316175}
+  bossSpawnPoint: {fileID: 1186855003}
   player: {fileID: 1781188246}
-  gameDuration: 300
+  gameDuration: 10
   startSpawnInterval: 4
   minimumSpawnInterval: 1
   startEnemiesPerWave: 2
@@ -6126,6 +6127,8 @@ MonoBehaviour:
   healthMultiplierPerMinute: 0.25
   speedMultiplierPerMinute: 0.08
   fireRateMultiplierPerMinute: 0.1
+  bossPrefab: {fileID: 8957959231194285945, guid: 2acd9d205d926c644a18224698301865,
+    type: 3}
 --- !u!4 &272132557
 Transform:
   m_ObjectHideFlags: 0
@@ -7368,7 +7371,7 @@ Transform:
   m_GameObject: {fileID: 317385373}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 308.78705, y: 3.96364, z: 151.48956}
+  m_LocalPosition: {x: 308.78705, y: 0, z: 151.48956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17960,7 +17963,7 @@ Transform:
   m_GameObject: {fileID: 645790596}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -187.21295, y: 3.96364, z: 151.48956}
+  m_LocalPosition: {x: -187.21295, y: 0, z: 151.48956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27724,7 +27727,7 @@ Transform:
   m_GameObject: {fileID: 996316174}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.21296, y: 3.96364, z: -140.51044}
+  m_LocalPosition: {x: 96.4, y: 0, z: -85.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30707,6 +30710,7 @@ Transform:
   - {fileID: 645790597}
   - {fileID: 317385374}
   - {fileID: 996316175}
+  - {fileID: 1186855003}
   m_Father: {fileID: 272132557}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1104243952
@@ -33479,6 +33483,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1186436507}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1186855002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1186855003}
+  m_Layer: 0
+  m_Name: Boss Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1186855003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186855002}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1101158634}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1188311958
 PrefabInstance:
   m_ObjectHideFlags: 0
