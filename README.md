@@ -8,4 +8,3 @@
 * [Play scene setup](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#play-scene-setup)
 * [Gun](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#gun)
 * [GameControl](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#gamecontrol)
-* 
