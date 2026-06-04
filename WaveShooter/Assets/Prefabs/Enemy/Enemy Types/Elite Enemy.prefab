@@ -831,6 +831,7 @@ GameObject:
   - component: {fileID: 2205528476057443638}
   - component: {fileID: 6471640050236754329}
   - component: {fileID: 2753899848474716303}
+  - component: {fileID: 20729791593560566}
   m_Layer: 0
   m_Name: Elite Enemy
   m_TagString: Untagged
@@ -888,6 +889,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   target: {fileID: 0}
+--- !u!65 &20729791593560566
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8957959231194285945}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.0257688, y: 5.215538, z: 20.478218}
+  m_Center: {x: -0.03388638, y: 0.31853867, z: -0.98272705}
 --- !u!1001 &1426742038026849503
 PrefabInstance:
   m_ObjectHideFlags: 0

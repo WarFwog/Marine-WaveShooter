@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 5794904020507901519}
   - component: {fileID: 4992044438774081839}
   - component: {fileID: 6441597199017333411}
+  - component: {fileID: 1664688797903484165}
   m_Layer: 0
   m_Name: Enemy_M
   m_TagString: Untagged
@@ -251,6 +252,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   target: {fileID: 0}
+--- !u!65 &1664688797903484165
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5440888385594557725}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.2616825, y: 5.0907993, z: 12.753324}
+  m_Center: {x: 0.030898094, y: 2.0454001, z: -1.1061225}
 --- !u!1 &7098298011303645748
 GameObject:
   m_ObjectHideFlags: 0

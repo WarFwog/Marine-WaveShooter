@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 1965778373510225922}
   - component: {fileID: 478685294219003048}
   - component: {fileID: 867733815207466557}
+  - component: {fileID: 1201348488670689842}
   m_Layer: 0
   m_Name: Enemy_S
   m_TagString: Untagged
@@ -282,6 +283,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   target: {fileID: 0}
+--- !u!65 &1201348488670689842
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5451105975389517391}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.7049084, y: 2.7240648, z: 6.082799}
+  m_Center: {x: -0.054276466, y: 1.6218982, z: -0.21071911}
 --- !u!1 &5541568901639128704
 GameObject:
   m_ObjectHideFlags: 0

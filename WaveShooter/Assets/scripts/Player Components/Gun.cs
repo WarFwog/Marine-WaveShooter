@@ -55,7 +55,7 @@ public class Gun : MonoBehaviour
     {
         Debug.Log("Turret schiet");
         GameObject bulletB = Instantiate(bulletPrefab, gunPoint.position, Quaternion.identity);
-        Bullet bulletscript = bulletB.GetComponent<Bullet>();
+        PlayerProjectile bulletscript = bulletB.GetComponent<PlayerProjectile>();
         bulletscript.SetTarget(_target);
         Debug.Log("Pew Pew");
     }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class PlayerProjectile : MonoBehaviour
 {
 
     [SerializeField] private Transform target;
@@ -9,8 +9,6 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float bulletSpeed = 9f;
     [SerializeField] private int bulletDamage = 1;
     [SerializeField] private float hitDistance = 0.5f;
-    [Header("References")]
-    [SerializeField] private Rigidbody rb;
 
 
     public void SetTarget(Transform _target)
@@ -48,7 +46,6 @@ public class Bullet : MonoBehaviour
         var health = target.GetComponent<EnemyStats>();
         if (health != null)
         {
-            Debug.Log("Hit");
             health.TakeDamage(bulletDamage);
         }
         Destroy(gameObject);

@@ -5,20 +5,20 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float maxHealth;
     [SerializeField] public HealthBar healthBar;
 
-    private float currentHealth;
+    private float _currentHealth;
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        _currentHealth = maxHealth;
 
         healthBar.SetSliderMax(maxHealth);
     }
 
     public void TakeDamage(float amount)
     {
-        currentHealth -= amount;
-        healthBar.SetSlider(currentHealth);
-        if (currentHealth <= 0)
+        _currentHealth -= amount;
+        healthBar.SetSlider(_currentHealth);
+        if (_currentHealth <= 0)
             EndGame();
     }
 
