@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GunshipRaycast : MonoBehaviour
+public class GunshipShooting : MonoBehaviour
 {
     [Header("Shooting")]
     [SerializeField] private Transform _firePoint;
@@ -45,7 +45,7 @@ public class GunshipRaycast : MonoBehaviour
 
         if (hitSuccess)
         {
-            Debug.Log($"✅ Raycast SUCCESS - Hit world position: {hitPoint}");
+            Debug.Log($"Raycast SUCCESS - Hit world position: {hitPoint}");
 
             AimAtTarget(hitPoint);
             PlayMuzzleFlash();
@@ -53,7 +53,7 @@ public class GunshipRaycast : MonoBehaviour
         }
         else
         {
-            Debug.Log($"⚠️ Raycast FAILED - No hit detected. Using fallback position.");
+            Debug.Log($"Raycast FAILED - No hit detected. Using fallback position.");
             
             // Still try to shoot even if no physics hit
             AimAtTarget(hitPoint);
