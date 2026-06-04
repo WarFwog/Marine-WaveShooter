@@ -1,55 +1,10 @@
-# Marine-WaveShooter
-
-Onze eind examen game voor de Marine als klant, Bestuur boot, schiet enemies, krijg resources, koop upgrades, repeat
-
-
-
-# Geproduceerde Game Onderdelen
-
-per teammate welke game onderdelen wij hebben geproduceerd, we moeten dit doen met behulp van omschrijvingen, visual sheets en screenshots. we moeten ook een overzicht met alle onderdelen met een link naar de map waarin deze zijn terug te vinden
-
-
-
-Developers:
-
-Brian de Reus:
-
-* test 1
-* test 2
-
-Dylano Bakmeijer:
-
-* test 3
-
-Ytshiero Bruce:
-
-
-
-Artists:
-
-Femke Aten:
-
-Nero Krop:
-
-Phoenix Aardenburg:
-
-Ruby Wijnands:
-
-
-
-## test 1 by Brian de Reus
-
-De dinosaurus met de langste naam is de micropachycephalosaurus, de grootste vliegende dier ooit is de quetzalcoatlus.
-
-## Flowchart voor test 1
-
-(voeg hier foto toe van flowchart)
-
-## Class Diagram van (wat de mechanic ook is)
-
-(voeg hier class diagram toe)
-
-## test 3 bij Dylano Bakmeijer
-
-
-
+* [Gunship Shooting System](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#gunship-shooting-system) | Ytshiero Bruce
+* [Power-Up System](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#power-up-system) | Ytshiero Bruce
+* [Gunship Camera System](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#gunship-camera-system) | Ytshiero Bruce
+* [Weapon plot](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#weapon-plot)
+* [Turret customization](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#turret-customization)
+* [Turret auto shooting system](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#turret-auto-shooting-system)
+* [Ship collector](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#ship-collector)
+* [Play scene setup](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#play-scene-setup)
+* [Gun](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#gun)
+* [GameControl](https://github.com/WarFwog/Marine-WaveShooter/wiki/Technisch-Ontwerp#gamecontrol)
