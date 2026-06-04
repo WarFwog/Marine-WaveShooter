@@ -35016,6 +35016,69 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1238161289}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1238920920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1238920922}
+  - component: {fileID: 1238920921}
+  m_Layer: 0
+  m_Name: test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1238920921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238920920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbfaad0d184ff5c4cb169c70b33bebce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyWaveManager
+  enemyTypes:
+  - enemyName: teest
+    prefab: {fileID: 5451105975389517391, guid: f45866399eca5c048a1b42ef43ecaed7,
+      type: 3}
+    spawnWeight: 1
+  spawnPoints:
+  - {fileID: 1238920922}
+  bossSpawnPoint: {fileID: 1238920922}
+  player: {fileID: 0}
+  gameDuration: 300
+  startSpawnInterval: 4
+  minimumSpawnInterval: 1
+  startEnemiesPerWave: 2
+  maxEnemiesPerWave: 15
+  healthMultiplierPerMinute: 0.25
+  speedMultiplierPerMinute: 0.08
+  fireRateMultiplierPerMinute: 0.1
+  bossPrefab: {fileID: 5451105975389517391, guid: f45866399eca5c048a1b42ef43ecaed7,
+    type: 3}
+--- !u!4 &1238920922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238920920}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.7, y: 0, z: -5.32704}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1239268777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43083,7 +43146,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2530c7a6d0fbe304ab104d4d44b6bdd8,
         type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4083501151425157549, guid: 2530c7a6d0fbe304ab104d4d44b6bdd8,
         type: 3}
@@ -59388,3 +59451,4 @@ SceneRoots:
   - {fileID: 1908826793}
   - {fileID: 879115214}
   - {fileID: 782969380}
+  - {fileID: 1238920922}
