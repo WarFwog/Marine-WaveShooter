@@ -29,6 +29,7 @@ public class EnemyProjectile : MonoBehaviour
 
         if (distance <= hitDistance)
         {
+            Debug.Log("test2");
             HitTarget();
             return;
         }
@@ -47,6 +48,7 @@ public class EnemyProjectile : MonoBehaviour
         var health = _target.GetComponent<PlayerStats>();
         if (health != null)
         {
+            Debug.Log("Test");
             health.TakeDamage(_damage);
         }
         Destroy(gameObject);
