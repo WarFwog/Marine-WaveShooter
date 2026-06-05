@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8762699900658204933}
   - component: {fileID: 6633908098984095509}
   - component: {fileID: 277398447918342268}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: balk voor.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 8084867991853693029}
   - component: {fileID: 6220365302682005322}
   - component: {fileID: 5087015650980487982}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wapen_placement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2258355868204297754}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 478685294219003048}
   - component: {fileID: 867733815207466557}
   - component: {fileID: 1201348488670689842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 499122396037323686}
   - component: {fileID: 5473242044516215324}
   - component: {fileID: 8571599474144945949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: boar_rand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 7542602817296092569}
   - component: {fileID: 3764567976116666091}
   - component: {fileID: 8661956818660904655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: boat motor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 7864889561876302996}
   - component: {fileID: 7425583618540814730}
   - component: {fileID: 2984709430591806716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sitjes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 1679720288660108317}
   - component: {fileID: 1994840189021550954}
   - component: {fileID: 6479762426558435428}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: balk voor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -671,7 +671,7 @@ GameObject:
   - component: {fileID: 6343173643108096174}
   - component: {fileID: 7908912647872022475}
   - component: {fileID: 843213214796745027}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: boar_klein_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -763,7 +763,7 @@ GameObject:
   - component: {fileID: 504359409994724283}
   - component: {fileID: 782727530381056712}
   - component: {fileID: 5480416886294555022}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: balk achter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -923,6 +923,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MARINE_Wapen_turret_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 27fef92a6b89768449aefaeb0411b724,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

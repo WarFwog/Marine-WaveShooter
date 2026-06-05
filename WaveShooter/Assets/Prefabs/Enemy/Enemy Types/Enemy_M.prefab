@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1517336136899525616}
   - component: {fileID: 1490301458774440924}
   - component: {fileID: 205091351852893999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wapen_Placement.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 4630667732098580708}
   - component: {fileID: 7358770628577991312}
   - component: {fileID: 2926906983872224563}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 4992044438774081839}
   - component: {fileID: 6441597199017333411}
   - component: {fileID: 1664688797903484165}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy_M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 786989972894293662}
   - component: {fileID: 259671374420490184}
   - component: {fileID: 7713708982579508962}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wapen_Placement.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8140685142425466241}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 2605611396297561941}
   - component: {fileID: 6798839204994337778}
   - component: {fileID: 5839733342488063939}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 2337938420654938657}
   - component: {fileID: 1632947884028728497}
   - component: {fileID: 6067633462796921289}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -653,6 +653,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MARINE_Wapen_turret_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 27fef92a6b89768449aefaeb0411b724,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

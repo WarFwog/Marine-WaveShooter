@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4745431521857146239}
   - component: {fileID: 3297966130259502976}
   - component: {fileID: 4856588554067983337}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wapen_placement.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 4066384425470557056}
   - component: {fileID: 8929492327163103317}
   - component: {fileID: 4907222018915307797}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wapen_placement.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7533665614048777869}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 4387653749041692128}
   - component: {fileID: 8646459354540075044}
   - component: {fileID: 4958509745349835344}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: beneden reling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 4350890221343046524}
   - component: {fileID: 5993072854156243900}
   - component: {fileID: 3381792796018086043}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bovenreling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 286045986869402290}
   - component: {fileID: 5997376430952183574}
   - component: {fileID: 7306022747866231214}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Groote_Boot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -489,7 +489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6077598448677911866}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8160965297363717636}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RotationFix
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 874084986342449278}
   - component: {fileID: 3287316166630518703}
   - component: {fileID: 9093888170423408372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder.053
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 3169632880373016735}
   - component: {fileID: 6452926300145530190}
   - component: {fileID: 2603083381893925440}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: mid reling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -741,7 +741,7 @@ GameObject:
   - component: {fileID: 3221796491965780362}
   - component: {fileID: 8152776391468884896}
   - component: {fileID: 6263755629470022616}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: wapen_placement.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 6471640050236754329}
   - component: {fileID: 2753899848474716303}
   - component: {fileID: 20729791593560566}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Elite Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -993,6 +993,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MARINE_Wapen_turret_02
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 27fef92a6b89768449aefaeb0411b724,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1134,6 +1139,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MARINE_Wapen_turret_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 27fef92a6b89768449aefaeb0411b724,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
