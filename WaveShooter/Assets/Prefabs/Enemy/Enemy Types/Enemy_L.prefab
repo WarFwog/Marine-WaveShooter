@@ -181,7 +181,7 @@ MonoBehaviour:
   moveSpeed: 1
   acceleration: 4
   turnSpeed: 60
-  shootingRange: 25
+  shootingRange: 20
   fireRate: 1
   damage: 10
 --- !u!114 &5368155843106863867

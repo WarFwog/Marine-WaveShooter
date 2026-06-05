@@ -24,7 +24,7 @@ public class BossEnemy : EnemyStats
         _phaseTwo = true;
         
         fireRate *= 2f;
-        moveSpeed *= 1.5f;
+        moveSpeed *= 2.02f;
         shootingRange *= 1.25f;
         
         Debug.Log("Boss entered phase 2!");

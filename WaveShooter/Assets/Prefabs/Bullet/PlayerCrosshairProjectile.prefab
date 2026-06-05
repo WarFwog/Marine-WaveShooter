@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 823953033988185577}
   - component: {fileID: 6959893797375036582}
   m_Layer: 0
-  m_Name: PlayerProjectile
+  m_Name: PlayerCrosshairProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 4755997317665035483}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.08931, y: 0, z: 87.47867}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,6 +125,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   target: {fileID: 0}
-  bulletSpeed: 20
+  bulletSpeed: 40
   bulletDamage: 10
   hitDistance: 0.5

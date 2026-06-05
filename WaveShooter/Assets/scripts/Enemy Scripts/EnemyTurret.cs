@@ -4,6 +4,8 @@ public class EnemyTurret : MonoBehaviour
 {
     [SerializeField] private Transform firePoint;
     [SerializeField] private EnemyProjectile projectilePrefab;
+    [SerializeField] private float fireRateMultiplier;
+    [SerializeField] private float damageMultiplier;
 
     private EnemyStats _stats;
     private Transform _target;
@@ -33,7 +35,7 @@ public class EnemyTurret : MonoBehaviour
         if (!(Time.time >= _timeUntilNextFireTime)) return; 
         
         Shoot();
-        _timeUntilNextFireTime = Time.time + (1f / _stats.fireRate);
+        _timeUntilNextFireTime = Time.time + (1f / _stats.fireRate) * fireRateMultiplier;
     }
 
     private void AimAtTarget()
@@ -48,6 +50,6 @@ public class EnemyTurret : MonoBehaviour
         if (projectilePrefab == null || firePoint == null) return;
         
         var projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-        projectile.Init(_target, _stats.damage);
+        projectile.Init(_target, _stats.damage * damageMultiplier);
     }
 }

@@ -261,15 +261,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0cbc8fcadfe0442860b8aefb28259c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
-  maxHealth: 100
+  maxHealth: 25
   currentHealth: 0
   weight: 1
   moveSpeed: 3
   acceleration: 4
   turnSpeed: 60
-  shootingRange: 25
-  fireRate: 1
-  damage: 10
+  shootingRange: 15
+  fireRate: 3
+  damage: 1
 --- !u!114 &867733815207466557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -963,6 +963,8 @@ MonoBehaviour:
   firePoint: {fileID: 2258355868204297754}
   projectilePrefab: {fileID: 7490519633240224359, guid: 989cb34d1cdc0264db5076fa1d06145b,
     type: 3}
+  fireRateMultiplier: 0
+  damageMultiplier: 0
 --- !u!4 &3238178298132241975 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 27fef92a6b89768449aefaeb0411b724,

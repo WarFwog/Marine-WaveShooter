@@ -230,15 +230,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce0cbc8fcadfe0442860b8aefb28259c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
-  maxHealth: 100
+  maxHealth: 60
   currentHealth: 0
   weight: 1
   moveSpeed: 2
   acceleration: 4
   turnSpeed: 60
   shootingRange: 25
-  fireRate: 1
-  damage: 10
+  fireRate: 2
+  damage: 3
 --- !u!114 &6441597199017333411
 MonoBehaviour:
   m_ObjectHideFlags: 0

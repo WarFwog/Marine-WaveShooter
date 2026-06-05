@@ -829,7 +829,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2205528476057443638}
-  - component: {fileID: 6471640050236754329}
+  - component: {fileID: 7305717523328042354}
   - component: {fileID: 2753899848474716303}
   - component: {fileID: 20729791593560566}
   m_Layer: 6
@@ -855,7 +855,7 @@ Transform:
   - {fileID: 8160965297363717636}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6471640050236754329
+--- !u!114 &7305717523328042354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -864,16 +864,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 8957959231194285945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce0cbc8fcadfe0442860b8aefb28259c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5d4a655186dfb364ba8d0cd331b69798, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyStats
-  maxHealth: 100
+  m_EditorClassIdentifier: Assembly-CSharp::BossEnemy
+  maxHealth: 250
   currentHealth: 0
   weight: 1
   moveSpeed: 1
   acceleration: 4
   turnSpeed: 60
-  shootingRange: 25
+  shootingRange: 35
   fireRate: 1
   damage: 10
 --- !u!114 &2753899848474716303
@@ -1010,10 +1010,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2932976914466495783}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 27fef92a6b89768449aefaeb0411b724,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2971259310978750064}
   m_SourcePrefab: {fileID: 100100000, guid: 27fef92a6b89768449aefaeb0411b724, type: 3}
 --- !u!4 &1460986170527214388 stripped
 Transform:
@@ -1042,21 +1038,8 @@ MonoBehaviour:
   firePoint: {fileID: 6077598448677911866}
   projectilePrefab: {fileID: 7490519633240224359, guid: 989cb34d1cdc0264db5076fa1d06145b,
     type: 3}
---- !u!114 &2971259310978750064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2237628770665640334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc9bfa400433dc5448c4acb99267b46b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyTurret
-  firePoint: {fileID: 6077598448677911866}
-  projectilePrefab: {fileID: 7490519633240224359, guid: 989cb34d1cdc0264db5076fa1d06145b,
-    type: 3}
+  fireRateMultiplier: 0
+  damageMultiplier: 0
 --- !u!1001 &9196864761755925394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1156,10 +1139,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 27fef92a6b89768449aefaeb0411b724,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7546102626057206487}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 27fef92a6b89768449aefaeb0411b724,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 2091817717874533804}
   m_SourcePrefab: {fileID: 100100000, guid: 27fef92a6b89768449aefaeb0411b724, type: 3}
 --- !u!1 &8313849524230145731 stripped
@@ -1168,21 +1147,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 9196864761755925394}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7546102626057206487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8313849524230145731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc9bfa400433dc5448c4acb99267b46b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyTurret
-  firePoint: {fileID: 7533665614048777869}
-  projectilePrefab: {fileID: 7490519633240224359, guid: 989cb34d1cdc0264db5076fa1d06145b,
-    type: 3}
 --- !u!114 &2091817717874533804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1198,6 +1162,8 @@ MonoBehaviour:
   firePoint: {fileID: 7533665614048777869}
   projectilePrefab: {fileID: 7490519633240224359, guid: 989cb34d1cdc0264db5076fa1d06145b,
     type: 3}
+  fireRateMultiplier: 0.2
+  damageMultiplier: 0.2
 --- !u!4 &8659132061778025593 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 27fef92a6b89768449aefaeb0411b724,
